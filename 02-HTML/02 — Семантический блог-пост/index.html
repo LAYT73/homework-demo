@@ -7,6 +7,7 @@
         <meta name="description" content="Описание страницы..." />
     </head>
     <body>
+        <!--Статья-->
         <article>
             <!--Заголовок статьи-->
             <header>
@@ -19,27 +20,38 @@
             <!--Содержание статьи-->
             <aside>
                 <h2>Навигация</h2>
-                <ul>
-                    <li><a href="#picture">Картинка</a></li>
-                    <li><a href="#text">Текст</a></li>
-                    <li><a href="#quote">Цитата</a></li>
-                </ul>
+                <nav>
+                    <ul>
+                        <li><a href="#picture">Картинка</a></li>
+                        <li><a href="#first">Первый блок</a></li>
+                        <li><a href="#second">Второй блок</a></li>
+                        <li><a href="#quote">Цитата</a></li>
+                    </ul>
+                </nav>
             </aside>
             <!--Основной контент статьи-->
-            <h2>Основной контент</h2>
+            <h2>История создания</h2>
             <figure id="picture">
                 <img src="./image.jpeg" alt="Описание содержания" />
                 <figcaption>Описание картинки статьи</figcaption>
             </figure>
-            <p id="text">Абзац текста...</p>
-            <p>Абзац текста...</p>
-            <p>Абзац текста...</p>
-            <figure id="quote">
-                <blockquote cite="https://example.com">
-                    <p>Цитата такая то</p>
-                </blockquote>
-                <figcaption>— Автор такой-то</figcaption>
-            </figure>
+            <section id="first">
+                <h3>Первые шаги</h3>
+                <p>Абзац текста...</p>
+                <p>Абзац текста...</p>
+                <p>Абзац текста...</p>
+            </section>
+            <section id="second">
+                <h3>Развитие идеи</h3>
+                <p>Абзац текста...</p>
+                <p>Абзац текста...</p>
+                <p>Абзац текста...</p>
+            </section>
+            <!--Цитата-->
+            <blockquote id="quote" cite="https://example.com">
+                <p>Цитата такая то</p>
+                <cite>Автор такой-то</cite>
+            </blockquote>
             <!--Подвал статьи-->
             <footer>
                 <p>Источник: <a href="https://example.com">example.com</a></p>
