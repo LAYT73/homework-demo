@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>03 — Форма регистрации</title>
+        <meta name="description" content="Описание страницы" />
+    </head>
+    <body>
+        <form action="/register" method="POST">
+            <h1>Форма регистрации</h1>
+
+            <label>
+                Имя:
+                <input
+                    type="text"
+                    name="name"
+                    autocomplete="name"
+                    placeholder="Введите ваше имя"
+                    minlength="3"
+                    required
+                />
+            </label>
+
+            <label>
+                Почта:
+                <input
+                    type="email"
+                    name="email"
+                    autocomplete="email"
+                    placeholder="Введите вашу почту"
+                    required
+                />
+            </label>
+
+            <fieldset>
+                <legend>Безопасность</legend>
+
+                <label>
+                    Пароль:
+                    <input
+                        type="password"
+                        name="password"
+                        autocomplete="new-password"
+                        placeholder="Придумайте ваш пароль"
+                        minlength="8"
+                        required
+                    />
+                </label>
+                <label>
+                    Подтверждение пароля:
+                    <input
+                        type="password"
+                        name="confirmPassword"
+                        autocomplete="new-password"
+                        placeholder="Подтвердите ваш пароль"
+                        minlength="8"
+                        required
+                    />
+                </label>
+            </fieldset>
+
+            <label>
+                Номер телефона:
+                <input
+                    type="tel"
+                    name="phone"
+                    autocomplete="tel"
+                    pattern="\+7\-[0-9]{3}\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}"
+                    title="Формат: +7-999-999-99-99"
+                    placeholder="+7-999-999-99-99"
+                    required
+                />
+            </label>
+
+            <label>
+                Страна:
+                <select name="country">
+                    <option value="russia" selected>Россия</option>
+                    <option value="usa">США</option>
+                    <option value="china">Китай</option>
+                </select>
+            </label>
+
+            <label>
+                <input type="checkbox" name="agree" required />
+                Я согласен с
+                <a href="/privacy-policy">политикой конфиденциальности </a>
+            </label>
+
+            <button type="submit">Регистрация</button>
+        </form>
+    </body>
+</html>
