@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>02 — Семантический блог-пост</title>
+        <meta name="description" content="Описание страницы..." />
+    </head>
+    <body>
+        <article>
+            <!--Заголовок статьи-->
+            <header>
+                <h1>Статья такая-то</h1>
+                <address>
+                    Автор: <a href="https://example.com">Иванов И. И.</a>
+                </address>
+                <time datetime="2026-01-01">1 января 2026</time>
+            </header>
+            <!--Содержание статьи-->
+            <aside>
+                <h2>Навигация</h2>
+                <ul>
+                    <li><a href="#picture">Картинка</a></li>
+                    <li><a href="#text">Текст</a></li>
+                    <li><a href="#quote">Цитата</a></li>
+                </ul>
+            </aside>
+            <!--Основной контент статьи-->
+            <h2>Основной контент</h2>
+            <figure id="picture">
+                <img src="./image.jpeg" alt="Описание содержания" />
+                <figcaption>Описание картинки статьи</figcaption>
+            </figure>
+            <p id="text">Абзац текста...</p>
+            <p>Абзац текста...</p>
+            <p>Абзац текста...</p>
+            <figure id="quote">
+                <blockquote cite="https://example.com">
+                    <p>Цитата такая то</p>
+                </blockquote>
+                <figcaption>— Автор такой-то</figcaption>
+            </figure>
+            <!--Подвал статьи-->
+            <footer>
+                <p>Источник: <a href="https://example.com">example.com</a></p>
+            </footer>
+        </article>
+    </body>
+</html>
