@@ -7,22 +7,147 @@
         <meta name="description" content="Описание страницы..." />
     </head>
     <body>
-        <form action="/url" method="POST">
+        <form action="https://example.com/url" method="POST">
             <h1>Форма опроса</h1>
 
             <fieldset>
-                <legend>Группа 1</legend>
+                <legend>Личная информация</legend>
 
-                
+                <label for="name">
+                    Имя:
+                    <input
+                        type="text"
+                        name="name"
+                        id="name"
+                        placeholder="Введите ваше имя"
+                        required
+                        autocomplete="given-name"
+                        minlength="3"
+                    />
+                </label>
+
+                <label for="surname">
+                    Фамилия:
+                    <input
+                        type="text"
+                        name="surname"
+                        id="surname"
+                        autocomplete="family-name"
+                        placeholder="Введите вашу фамилию"
+                        required
+                        minlength="3"
+                    />
+                </label>
+
+                <label for="birthday">
+                    День рождения:
+                    <input
+                        type="date"
+                        id="birthday"
+                        name="birthday"
+                        required
+                        autocomplete="bday"
+                    />
+                </label>
+
+                <label for="mood">
+                    Ваше настроение:
+                    <input
+                        type="range"
+                        id="mood"
+                        name="mood"
+                        min="0"
+                        max="10"
+                        step="1"
+                        value="5"
+                    />
+                </label>
+                <output for="mood">5</output>
+
+                <fieldset>
+                    <legend>Ваш пол</legend>
+
+                    <label for="sex-male">
+                        Мужской:
+                        <input
+                            type="radio"
+                            name="sex"
+                            id="sex-male"
+                            value="male"
+                            required
+                        />
+                    </label>
+                    <label>
+                        Женский:
+                        <input
+                            type="radio"
+                            name="sex"
+                            id="sex-female"
+                            value="female"
+                        />
+                    </label>
+                </fieldset>
             </fieldset>
-
             <fieldset>
-                <legend>Группа 2</legend>
+                <legend>Досуг</legend>
+
+                <label for="hobby">
+                    Ваши хобби:
+                    <select name="hobby" id="hobby" multiple required>
+                        <option value="sport">Спорт</option>
+                        <option value="games">Игры</option>
+                        <option value="self-education">Саморазвитие</option>
+                    </select>
+                </label>
+                <p>Зажмите Ctrl/Cmd для выбора нескольких вариантов</p>
+
+                <label for="schedule">
+                    Ваше расписание:
+                    <textarea
+                        name="schedule"
+                        id="schedule"
+                        rows="10"
+                        placeholder="Опишите ваш обычный день..."
+                        required
+                        minlength="10"
+                    ></textarea>
+                </label>
+
+                <fieldset>
+                    <legend>Ваш любимый цвет</legend>
+                    <label for="favouriteColorsRed">
+                        Красный
+                        <input
+                            type="checkbox"
+                            id="favouriteColorsRed"
+                            name="favouriteColors"
+                            value="red"
+                        />
+                    </label>
+                    <label for="favouriteColorsBlue">
+                        Синий
+                        <input
+                            type="checkbox"
+                            id="favouriteColorsBlue"
+                            name="favouriteColors"
+                            value="blue"
+                        />
+                    </label>
+                    <label for="favouriteColorsGreen">
+                        Зеленый
+                        <input
+                            type="checkbox"
+                            id="favouriteColorsGreen"
+                            name="favouriteColors"
+                            value="green"
+                        />
+                    </label>
+                </fieldset>
             </fieldset>
 
             <div class="buttons">
-                <button type="submit">Отправить</button>
-                <button type="reset">Сбросить</button>
+                <button type="submit">Отправить анкету</button>
+                <button type="reset">Очистить анкету</button>
             </div>
         </form>
     </body>
